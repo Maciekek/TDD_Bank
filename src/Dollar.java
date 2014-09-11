@@ -1,14 +1,15 @@
 
-public class Dollar {
+public class Dollar extends Money {
 	
-	int amount = 5*2;
 	
 	Dollar(int amount){
-		
+		this.amount = amount;
+		currency = "USD";
 	}
 	
-	public void times(int multiplier){
-		
+	public Money times(int multiplier){
+		return new Dollar(amount*multiplier);
 	}
-
+	
+	
 }
